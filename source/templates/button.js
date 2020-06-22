@@ -6,4 +6,4 @@ const html = `
 const css = `
 `;
 
-export const element = template(html, css);
+export const button = template(html, css);

@@ -1,11 +1,11 @@
 import { Quantum, define } from '../../references/quantum.js';
-import { element } from '../templates/element.js';
+import { button } from '../templates/button.js';
 import { name } from '../attributes/name.js';
 import { click } from '../events/click.js';
 
-export class Element extends Quantum {
+export class Button extends Quantum {
     constructor() {
-        super(element);
+        super(button);
     }
 
     static elements = {
@@ -21,4 +21,4 @@ export class Element extends Quantum {
     };
 }
 
-define(Element);
+define(Button);
