@@ -1,2 +1,2 @@
-export const name = elements => value => {
+export const name = root => value => {
 };
