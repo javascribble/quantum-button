@@ -1,10 +1,52 @@
 <html>
     <head>
         <link rel="stylesheet" href="/test/debug.css" />
+        <script type="module" src="/references/quantum-icon.js"></script>
         <script type="module" src="/source/main.js"></script>
     </head>
     <body>
-        <quantum-button></quantum-button>
-		<input type="button"><input type="submit"><input type="reset">
+        <div>
+            <quantum-button>Basic</quantum-button>
+            <quantum-button>
+                Icon<quantum-icon code="#10004"></quantum-icon>
+            </quantum-button>
+            <quantum-button round>
+                <quantum-icon code="#10004"></quantum-icon>Round
+            </quantum-button>
+            <quantum-button disabled>Disabled</quantum-button>
+        </div>
+        <div>
+            <quantum-button outlined>Border</quantum-button>
+            <quantum-button outlined>
+                Icon<quantum-icon code="#10004"></quantum-icon>
+            </quantum-button>
+            <quantum-button round outlined>
+                <quantum-icon code="#10004"></quantum-icon>Round
+            </quantum-button>
+            <quantum-button disabled outlined>Disabled</quantum-button>
+        </div>
+        <div>
+            <quantum-button raised>Raised</quantum-button>
+            <quantum-button raised>
+                Icon<quantum-icon code="#10004"></quantum-icon>
+            </quantum-button>
+            <quantum-button round raised>
+                <quantum-icon code="#10004"></quantum-icon>Round
+            </quantum-button>
+            <quantum-button disabled raised>Disabled</quantum-button>
+        </div>
+        <div>
+            <quantum-button raised accent>Accent</quantum-button>
+            <quantum-button raised accent>
+                Icon<quantum-icon code="#10004"></quantum-icon>
+            </quantum-button>
+            <quantum-button round raised accent>
+                <quantum-icon code="#10004"></quantum-icon>Round
+            </quantum-button>
+            <quantum-button disabled raised accent>Disabled</quantum-button>
+        </div>
+        <script>
+            document.querySelectorAll('quantum-button').forEach(button => button.addEventListener('click', console.log));
+        </script>
     </body>
 </html>

@@ -1,3 +1,23 @@
+:root {
+    --button-color: darkblue;
+    --button-background-color: none;
+    --button-hover-color: blue;
+    --button-hover-background-color: aliceblue;
+    --button-accent-color: snow;
+    --button-accent-background-color: navy;
+    --button-accent-hover-color: white;
+    --button-accent-hover-background-color: royalblue;
+    --button-text-transform: uppercase;
+    --button-letter-spacing: 0.1em;
+    --button-border-radius: 3px;
+    --button-padding: 0.7em 1em;
+    --button-disabled-color: gray;
+}
+
 body {
     margin: 0;
+}
+
+div {
+    margin: 10px; 
 }

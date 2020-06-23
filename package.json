@@ -6,6 +6,7 @@
     "dependencies": {},
     "devDependencies": {
         "@javascribble/quantum": "^0.3.0",
+        "@javascribble/quantum-icon": "^0.1.2",
         "live-server": "*"
     },
     "scripts": {
