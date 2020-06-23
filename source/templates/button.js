@@ -50,7 +50,7 @@ button.raised {
 }
 
     button.raised:hover:not([disabled]) {
-        box-shadow: 3px 3px 3px -1px grey;
+        box-shadow: 2px 3px 4px -1px grey;
     }
 
 button[disabled] {
