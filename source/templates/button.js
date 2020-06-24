@@ -6,12 +6,12 @@ const html = `
 
 const css = `
 button {
-    color: var(--button-color, inherit);
-    letter-spacing: var(--button-letter-spacing, 0.1em);
-    text-transform: var(--button-text-transform, uppercase);
-    background-color: var(--button-background-color, inherit);
-    border-radius: var(--button-border-radius, 3px);
-    padding: var(--button-padding, 0.7em 1em);
+    color: var(--quantum-button-color, inherit);
+    letter-spacing: var(--quantum-button-letter-spacing, 0.1em);
+    text-transform: var(--quantum-button-text-transform, uppercase);
+    background-color: var(--quantum-button-background-color, inherit);
+    border-radius: var(--quantum-button-border-radius, 3px);
+    padding: var(--quantum-button-padding, 0.7em 1em);
     box-sizing: border-box;
     font-size: inherit;
     line-height: 1em;
@@ -21,27 +21,27 @@ button {
 }
 
     button:hover:not([disabled]) {
-        color: var(--button-hover-color, inherit);
-        background-color: var(--button-hover-background-color, inherit);   
+        color: var(--quantum-button-hover-color, inherit);
+        background-color: var(--quantum-button-hover-background-color, inherit);   
     }
 
 button.accent {
-    color: var(--button-accent-color, inherit);
-    background-color: var(--button-accent-background-color, inherit);
+    color: var(--quantum-button-accent-color, inherit);
+    background-color: var(--quantum-button-accent-background-color, inherit);
 }
 
     button.accent:hover:not([disabled]) {
-        color: var(--button-accent-hover-color, inherit);
-        background-color: var(--button-accent-hover-background-color, inherit);
+        color: var(--quantum-button-accent-hover-color, inherit);
+        background-color: var(--quantum-button-accent-hover-background-color, inherit);
     }
 
 button.outlined {
-    border: solid var(--button-color, inherit) 1px;
+    border: solid var(--quantum-button-color, inherit) 1px;
     transition: border 0.1s;
 }
 
     button.outlined:hover:not([disabled]) {
-        border: solid var(--button-hover-color, inherit) 1px;
+        border: solid var(--quantum-button-hover-color, inherit) 1px;
     }
 
 button.raised {
@@ -54,8 +54,8 @@ button.raised {
     }
 
 button[disabled] {
-    color: var(--button-disabled-color, inherit);
-    border-color: var(--button-disabled-color, inherit);
+    color: var(--quantum-button-disabled-color, inherit);
+    border-color: var(--quantum-button-disabled-color, inherit);
     background-color: none;
     cursor: default;
 }
