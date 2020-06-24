@@ -1,17 +1,17 @@
 :root {
-    --button-color: darkblue;
-    --button-background-color: none;
-    --button-hover-color: blue;
-    --button-hover-background-color: aliceblue;
-    --button-accent-color: snow;
-    --button-accent-background-color: navy;
-    --button-accent-hover-color: white;
-    --button-accent-hover-background-color: royalblue;
-    --button-text-transform: uppercase;
-    --button-letter-spacing: 0.1em;
-    --button-border-radius: 3px;
-    --button-padding: 0.7em 1em;
-    --button-disabled-color: gray;
+    --quantum-button-color: darkblue;
+    --quantum-button-background-color: none;
+    --quantum-button-hover-color: blue;
+    --quantum-button-hover-background-color: aliceblue;
+    --quantum-button-accent-color: snow;
+    --quantum-button-accent-background-color: navy;
+    --quantum-button-accent-hover-color: white;
+    --quantum-button-accent-hover-background-color: royalblue;
+    --quantum-button-text-transform: uppercase;
+    --quantum-button-letter-spacing: 0.1em;
+    --quantum-button-border-radius: 3px;
+    --quantum-button-padding: 0.7em 1em;
+    --quantum-button-disabled-color: gray;
 }
 
 body {
