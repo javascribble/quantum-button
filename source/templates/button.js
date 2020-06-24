@@ -7,7 +7,7 @@ const html = `
 const css = `
 button {
     color: var(--button-color, inherit);
-    background-color: var(--button-background-color, inherit);
+    background: var(--button-background-color, inherit) no-repeat;
     letter-spacing: var(--button-letter-spacing, 0.1em);
     text-transform: var(--button-text-transform, uppercase);
     border-radius: var(--button-border-radius, 3px);
