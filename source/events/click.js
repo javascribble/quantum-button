@@ -12,7 +12,7 @@ export const click = (root, dispatch) => {
     };
 
     const style = button.style;
-    button.onclick = event => {
+    button.onmousedown = event => {
         let x = event.pageX - button.offsetLeft;
         let y = event.pageY - button.offsetTop;
         let elapsed = 0;
@@ -20,9 +20,9 @@ export const click = (root, dispatch) => {
             if (elapsed < duration) {
                 let ratio = elapsed / duration;
                 let easing = ratio * (2 - ratio);
-                let stop = 100 * easing;
-                let alpha = 0.5 * (1 - easing);
-                style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${stop}%, transparent ${stop}%)`;
+                let alpha = 0.1 * (1 - easing);
+                let range = 100 * easing;
+                style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
                 elapsed += deltaTime;
                 return true;
             } else {
