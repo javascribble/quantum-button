@@ -1,6 +1,6 @@
-import { query, setTypedAttribute } from '../../references/quantum.js';
+import { query, setAttribute } from '../../references/quantum.js';
 
 export const disabled = root => {
     const button = query(root, 'button');
-    return value => setTypedAttribute(button, 'disabled', value);
+    return value => setAttribute(button, 'disabled', value);
 };

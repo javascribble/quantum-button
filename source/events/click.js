@@ -1,12 +1,14 @@
-import { animate, query, has, stopPropagation } from '../../references/quantum.js';
+import { animate, query, stopPropagation } from '../../references/quantum.js';
 
 const duration = 500;
+
+const draw = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
 
 export const click = (root, dispatch) => {
     const button = query(root, 'button');
     const slot = query(root, 'slot');
     slot.onclick = event => {
-        if (has(button, 'disabled')) {
+        if (button.hasAttribute('disabled')) {
             stopPropagation(event);
         }
     };
@@ -20,9 +22,7 @@ export const click = (root, dispatch) => {
             if (elapsed < duration) {
                 let ratio = elapsed / duration;
                 let easing = ratio * (2 - ratio);
-                let alpha = 0.1 * (1 - easing);
-                let range = 100 * easing;
-                style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
+                style.backgroundImage = draw(x, y, 0.1 * (1 - easing), 100 * easing);
                 elapsed += deltaTime;
                 return true;
             } else {
