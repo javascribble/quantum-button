@@ -1,6 +1,3 @@
-import { query } from '../../references/quantum.js';
+import { addClasses } from '../../references/quantum.js';
 
-export const outlined = root => {
-    const button = query(root, 'button');
-    return value => button.classList.add('outlined');
-};
+export const outlined = shadow => value => addClasses(shadow.button, 'outlined');

@@ -1,6 +1,1 @@
-import { query } from '../../references/quantum.js';
-
-export const type = root => value => {
-    const button = query(root, 'button');
-    return value => button.type = value;
-};
+export const type = shadow => value => shadow.button.type = value;

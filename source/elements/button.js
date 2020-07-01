@@ -1,4 +1,4 @@
-import { Quantum, define } from '../../references/quantum.js';
+import { Quantum, defineElement, querySelector } from '../../references/quantum.js';
 import { button } from '../templates/button.js';
 import { accent } from '../attributes/accent.js';
 import { disabled } from '../attributes/disabled.js';
@@ -25,6 +25,11 @@ export class Button extends Quantum {
     static events = {
         click
     };
+
+    initializeShadowCallback(shadow) {
+        shadow.button = querySelector(shadow, 'button');
+        super.initializeShadowCallback(shadow);
+    }
 }
 
-define(Button);
+defineElement(Button);
