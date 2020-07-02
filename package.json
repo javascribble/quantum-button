@@ -5,7 +5,7 @@
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {
-        "@javascribble/quantum": "^0.4.0",
+        "@javascribble/quantum": "^0.4.2",
         "@javascribble/quantum-icon": "^0.4.0",
         "live-server": "*"
     },

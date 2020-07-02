@@ -16,13 +16,12 @@ export const click = (shadow, dispatch) => {
     button.onmousedown = event => {
         let x = event.pageX - button.offsetLeft;
         let y = event.pageY - button.offsetTop;
-        let elapsed = 0;
-        animate(deltaTime => {
+        animate(state => {
+            const elapsed = state.elapsedTime;
             if (elapsed < duration) {
                 let ratio = elapsed / duration;
                 let easing = ratio * (2 - ratio);
                 style.backgroundImage = draw(x, y, 0.1 * (1 - easing), 100 * easing);
-                elapsed += deltaTime;
                 return true;
             } else {
                 style.backgroundImage = 'none';
