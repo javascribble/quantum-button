@@ -1,12 +1,12 @@
 {
     "name": "@javascribble/quantum-button",
     "description": "",
-    "version": "0.1.2",
+    "version": "0.3.2",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {
-        "@javascribble/quantum": "^0.3.17",
-        "@javascribble/quantum-icon": "^0.1.6",
+        "@javascribble/quantum": "^0.4.0",
+        "@javascribble/quantum-icon": "^0.4.0",
         "live-server": "*"
     },
     "scripts": {

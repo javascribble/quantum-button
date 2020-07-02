@@ -1,3 +1,1 @@
-import { setAttribute } from '../../references/quantum.js';
-
-export const disabled = shadow => value => setAttribute(shadow.button, 'disabled', value);
+export const disabled = shadow => value => shadow.button.setAttribute('disabled', value);

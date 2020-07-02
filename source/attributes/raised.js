@@ -1,3 +1,1 @@
-import { addClasses } from '../../references/quantum.js';
-
-export const raised = shadow => value => addClasses(shadow.button, 'raised');
+export const raised = shadow => value => shadow.button.classList.add('raised');

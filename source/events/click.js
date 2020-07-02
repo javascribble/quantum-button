@@ -1,15 +1,14 @@
-import { animate, querySelector, stopPropagation } from '../../references/quantum.js';
+import { animate } from '../../references/quantum.js';
 
 const duration = 500;
 
 const draw = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
 
-export const click = (root, dispatch) => {
-    const button = querySelector(root, 'button');
-    const slot = querySelector(root, 'slot');
+export const click = (shadow, dispatch) => {
+    const { slot, button } = shadow;
     slot.onclick = event => {
         if (button.hasAttribute('disabled')) {
-            stopPropagation(event);
+            event.stopPropagation();
         }
     };
 
