@@ -1,1 +1,0 @@
-export const accent = shadow => value => shadow.button.classList.add('accent');

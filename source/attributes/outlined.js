@@ -1,1 +1,0 @@
-export const outlined = shadow => value => shadow.button.classList.add('outlined');

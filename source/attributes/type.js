@@ -1,1 +1,0 @@
-export const type = shadow => value => shadow.button.type = value;

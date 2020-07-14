@@ -1,36 +1,36 @@
-import { Quantum, define } from '../../references/quantum.js';
+import { Component, setAttribute } from '../../references/quantum.js';
 import { button } from '../templates/button.js';
-import { accent } from '../attributes/accent.js';
-import { disabled } from '../attributes/disabled.js';
-import { outlined } from '../attributes/outlined.js';
-import { raised } from '../attributes/raised.js';
-import { round } from '../attributes/round.js';
-import { type } from '../attributes/type.js';
-import { click } from '../events/click.js';
+import { draw } from '../utilities/animation.js';
 
-export class Button extends Quantum {
+export class Button extends Component {
+    #button;
+
     constructor() {
-        super(button);
+        super();
+
+        this.#button = this.shadowRoot.querySelector('button');
+        const slot = this.shadowRoot.querySelector('slot');
+        draw(slot, this.#button);
     }
 
-    static attributes = {
-        accent,
-        disabled,
-        outlined,
-        raised,
-        round,
-        type
-    };
+    static template = button;
 
-    static events = {
-        click
-    };
+    static attributes = [
+        'accented',
+        'disabled',
+        'outlined',
+        'raised',
+        'round',
+        'type'
+    ];
 
-    initializeShadowCallback(shadow) {
-        shadow.slot = shadow.querySelector('slot');
-        shadow.button = shadow.querySelector('button');
-        super.initializeShadowCallback(shadow);
+    disabledChangedCallback(value) {
+        setAttribute(this.#button, 'disabled', value);
+    }
+
+    typeChangedCallback(value) {
+        setAttribute(this.#button, 'type', value);
     }
 }
 
-define(Button);
+customElements.define('quantum-button', Button);

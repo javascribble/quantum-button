@@ -1,1 +1,0 @@
-export const raised = shadow => value => shadow.button.classList.add('raised');

@@ -1,1 +1,0 @@
-export const round = shadow => value => shadow.button.style.borderRadius = '100px';

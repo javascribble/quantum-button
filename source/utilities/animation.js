@@ -1,11 +1,6 @@
 import { animate } from '../../references/quantum.js';
 
-const duration = 500;
-
-const draw = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
-
-export const click = (shadow, dispatch) => {
-    const { slot, button } = shadow;
+export const draw = (slot, button, duration = 500) => {
     slot.onclick = event => {
         if (button.hasAttribute('disabled')) {
             event.stopPropagation();
@@ -21,7 +16,9 @@ export const click = (shadow, dispatch) => {
             if (elapsed < duration) {
                 let ratio = elapsed / duration;
                 let easing = ratio * (2 - ratio);
-                style.backgroundImage = draw(x, y, 0.1 * (1 - easing), 100 * easing);
+                let alpha = 0.1 * (1 - easing);
+                let range = 100 * easing;
+                style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
                 return true;
             } else {
                 style.backgroundImage = 'none';

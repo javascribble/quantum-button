@@ -1,1 +1,0 @@
-export const disabled = shadow => value => shadow.button.setAttribute('disabled', value);

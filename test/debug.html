@@ -1,8 +1,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="/test/debug.css" />
-        <link rel="modulepreload" href="/references/quantum-icon.js" />
-        <link rel="modulepreload" href="/source/main.js" />
         <script type="module" src="/references/quantum-icon.js"></script>
         <script type="module" src="/source/main.js"></script>
     </head>
@@ -38,14 +36,14 @@
             <quantum-button disabled raised>Disabled</quantum-button>
         </div>
         <div>
-            <quantum-button raised accent>Accent</quantum-button>
-            <quantum-button raised accent>
+            <quantum-button raised accented>Accent</quantum-button>
+            <quantum-button raised accented>
                 Icon<quantum-icon code="#10004"></quantum-icon>
             </quantum-button>
-            <quantum-button round raised accent>
+            <quantum-button round raised accented>
                 <quantum-icon code="#10004"></quantum-icon>Round
             </quantum-button>
-            <quantum-button disabled raised accent>Disabled</quantum-button>
+            <quantum-button disabled raised accented>Disabled</quantum-button>
         </div>
         <script>
             document.querySelectorAll('quantum-button').forEach(button => button.addEventListener('click', console.log));
