@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/test/debug.css" />
+        <script src="/test/debug.js"></script>
         <script type="module" src="/references/quantum-icon.js"></script>
         <script type="module" src="/source/main.js"></script>
     </head>
@@ -45,8 +46,5 @@
             </quantum-button>
             <quantum-button disabled raised accented>Disabled</quantum-button>
         </div>
-        <script>
-            document.querySelectorAll('quantum-button').forEach(button => button.addEventListener('click', console.log));
-        </script>
     </body>
 </html>

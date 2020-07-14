@@ -1,6 +1,6 @@
 import { animate } from '../../references/quantum.js';
 
-export const draw = (slot, button, duration = 500) => {
+export const animateRadialGradient = (slot, button, duration = 500) => {
     slot.onclick = event => {
         if (button.hasAttribute('disabled')) {
             event.stopPropagation();

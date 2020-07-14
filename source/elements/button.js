@@ -1,6 +1,5 @@
 import { Component, setAttribute } from '../../references/quantum.js';
-import { button } from '../templates/button.js';
-import { draw } from '../utilities/animation.js';
+import { animateRadialGradient } from '../utilities/animation.js';
 
 export class Button extends Component {
     #button;
@@ -10,10 +9,10 @@ export class Button extends Component {
 
         this.#button = this.shadowRoot.querySelector('button');
         const slot = this.shadowRoot.querySelector('slot');
-        draw(slot, this.#button);
+        animateRadialGradient(slot, this.#button);
     }
 
-    static template = button;
+    static template = document.querySelector('#quantum-button');
 
     static attributes = [
         'accented',
