@@ -3,10 +3,11 @@
     "description": "",
     "version": "0.4.3",
     "license": "MIT",
-    "dependencies": {},
-    "devDependencies": {
+    "dependencies": {
         "@javascribble/quantum": "^0.4.5",
-        "@javascribble/quantum-icon": "^0.4.2",
+        "@javascribble/quantum-icon": "^0.4.2"
+    },
+    "devDependencies": {
         "live-server": "*"
     },
     "scripts": {
