@@ -1,6 +1,18 @@
 import { animate } from '../../references/quantum.js';
 
-export const animateRadialGradient = (slot, button, duration = 500) => {
+const formatGradient = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
+
+export const radialGradientOptions = {
+    duration: 500,
+    alpha: 0.5
+};
+
+export const animateRadialGradient = (slot, button, options) => {
+    const { duration, alpha } = {
+        ...radialGradientOptions,
+        ...options
+    };
+
     slot.onclick = event => {
         if (button.hasAttribute('disabled')) {
             event.stopPropagation();
@@ -14,11 +26,9 @@ export const animateRadialGradient = (slot, button, duration = 500) => {
         animate(state => {
             const elapsed = state.elapsedTime;
             if (elapsed < duration) {
-                let ratio = elapsed / duration;
-                let easing = ratio * (2 - ratio);
-                let alpha = 0.1 * (1 - easing);
-                let range = 100 * easing;
-                style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
+                let progress = elapsed / duration;
+                let easing = progress * (2 - progress);
+                style.backgroundImage = formatGradient(x, y, alpha * (1 - easing), 100 * easing);
                 return true;
             } else {
                 style.backgroundImage = 'none';
