@@ -8,6 +8,8 @@ export class Button extends Component {
         super();
 
         this.#button = this.shadowRoot.querySelector('button');
+        this.#button.type = this.type;
+
         const slot = this.shadowRoot.querySelector('slot');
         animateRadialGradient(slot, this.#button);
     }
@@ -15,20 +17,11 @@ export class Button extends Component {
     static template = document.querySelector('#quantum-button');
 
     static attributes = [
-        'accented',
-        'disabled',
-        'outlined',
-        'raised',
-        'round',
-        'type'
+        'disabled'
     ];
 
     disabledChangedCallback(value) {
         setAttribute(this.#button, 'disabled', value);
-    }
-
-    typeChangedCallback(value) {
-        setAttribute(this.#button, 'type', value);
     }
 }
 
