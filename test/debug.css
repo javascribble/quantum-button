@@ -1,3 +1,12 @@
+body {
+    visibility: hidden;    
+    margin: 0;
+}
+
+div {
+    margin: 10px; 
+}
+
 quantum-button {
     --color: darkblue;
     --background-color: none;
@@ -48,12 +57,4 @@ quantum-button[theme=accent] {
 
 quantum-button[theme=round] {
     --border-radius: 100px;  
-}
-
-body {
-    margin: 0;
-}
-
-div {
-    margin: 10px; 
 }
