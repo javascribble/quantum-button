@@ -1,5 +1,6 @@
-import { Component, setAttribute } from '../../references/quantum.js';
+import { Component, template, setAttribute } from '../../references/quantum.js';
 import { animateRadialGradient } from '../utilities/animation.js';
+import html from '../templates/button.js';
 
 export class Button extends Component {
     #button;
@@ -14,7 +15,7 @@ export class Button extends Component {
         animateRadialGradient(slot, this.#button);
     }
 
-    static template = document.querySelector('#quantum-button');
+    static template = template(html);
 
     static attributes = [
         'disabled'
