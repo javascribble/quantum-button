@@ -1,4 +1,5 @@
 import '/source/main.js';
+import '/references/quantum-icon.js';
 
 document.body.style.visibility = 'visible';
 
