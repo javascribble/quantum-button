@@ -9,7 +9,6 @@ export class Button extends Component {
         super();
 
         this.#button = this.shadowRoot.querySelector('button');
-        this.#button.type = this.type;
 
         const slot = this.shadowRoot.querySelector('slot');
         animateRadialGradient(slot, this.#button);
