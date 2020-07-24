@@ -1,8 +1,7 @@
-import { Component, template, setAttribute } from '../../references/quantum.js';
 import { animateRadialGradient } from '../utilities/animation.js';
 import html from '../templates/button.js';
 
-export class Button extends Component {
+export class Button extends quantum.Component {
     #button;
 
     constructor() {
@@ -14,15 +13,17 @@ export class Button extends Component {
         animateRadialGradient(slot, this.#button);
     }
 
-    static template = template(html);
+    static template = quantum.template(html);
 
-    static attributes = [
-        'disabled'
-    ];
+    static get observedAttributes() { return ['disabled']; }
 
-    disabledChangedCallback(value) {
-        setAttribute(this.#button, 'disabled', value);
+    attributeChangedCallback(attribute, previousValue, currentValue) {
+        switch (attribute) {
+            case 'disabled':
+                quantum.setAttribute(this.#button, attribute, currentValue);
+                break;
+        }
     }
 }
 
-customElements.define('quantum-button', Button);
+quantum.define('quantum-button', Button);

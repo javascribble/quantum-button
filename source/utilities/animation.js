@@ -1,5 +1,3 @@
-import { animate } from '../../references/quantum.js';
-
 const formatGradient = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
 
 export const radialGradientOptions = {
@@ -23,8 +21,7 @@ export const animateRadialGradient = (slot, button, options) => {
     button.onmousedown = event => {
         let x = event.pageX - button.offsetLeft;
         let y = event.pageY - button.offsetTop;
-        animate(state => {
-            const elapsed = state.elapsedTime;
+        quantum.animate((delta, elapsed) => {
             if (elapsed < duration) {
                 let progress = elapsed / duration;
                 let easing = progress * (2 - progress);
