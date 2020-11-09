@@ -23,7 +23,8 @@ export const animateRadialGradient = (slot, button, options) => {
     button.onmousedown = event => {
         let x = event.pageX - button.offsetLeft;
         let y = event.pageY - button.offsetTop;
-        animate((delta, elapsed) => {
+        animate(time => {
+            const { elapsed } = time;
             if (elapsed < duration) {
                 let progress = elapsed / duration;
                 let easing = progress * (2 - progress);
