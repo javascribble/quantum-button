@@ -1,5 +1,5 @@
 import { Component, template, define, setAttribute } from '../import.js';
-import { animateRadialGradient } from '../utilities/animation.js';
+import { enableAnimation } from '../utilities/animation.js';
 import html from '../templates/button.js';
 
 export class Button extends Component {
@@ -10,8 +10,7 @@ export class Button extends Component {
 
         this.#button = this.shadowRoot.querySelector('button');
 
-        const slot = this.shadowRoot.querySelector('slot');
-        animateRadialGradient(slot, this.#button);
+        enableAnimation(this.slots.get(''), this.#button);
     }
 
     static template = template(html);

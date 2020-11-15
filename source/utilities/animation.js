@@ -1,26 +1,22 @@
+import { radialGradientOptions } from '../constants/animation.js';
 import { animate } from '../import.js';
 
 const formatGradient = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
 
-export const radialGradientOptions = {
-    duration: 500,
-    alpha: 0.5
-};
-
-export const animateRadialGradient = (slot, button, options) => {
+export const enableAnimation = (slot, button, options) => {
     const { duration, alpha } = {
         ...radialGradientOptions,
         ...options
     };
 
-    slot.onclick = event => {
+    slot.addEventListener('click', event => {
         if (button.hasAttribute('disabled')) {
             event.stopPropagation();
         }
-    };
+    });
 
     const style = button.style;
-    button.onmousedown = event => {
+    button.addEventListener('mousedown', event => {
         let x = event.pageX - button.offsetLeft;
         let y = event.pageY - button.offsetTop;
         animate(time => {
@@ -35,5 +31,5 @@ export const animateRadialGradient = (slot, button, options) => {
                 return false;
             }
         });
-    };
+    });
 };
