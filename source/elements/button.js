@@ -22,6 +22,9 @@ export class Button extends Component {
             case 'disabled':
                 setAttribute(this.#button, attribute, currentValue);
                 break;
+            // case 'loading':
+            //     // Implement spinner on content.
+            //     break;
         }
     }
 }

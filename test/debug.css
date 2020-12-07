@@ -58,3 +58,9 @@ quantum-button[theme=accent] {
 quantum-button[theme=round] {
     --border-radius: 100px;  
 }
+
+/*
+quantum-button:hover {
+    TODO scale  
+}
+*/
