@@ -10,7 +10,7 @@ export class Button extends Component {
 
         this.#button = this.shadowRoot.querySelector('button');
 
-        enableAnimation(this.slots.get(''), this.#button);
+        enableAnimation(this.#button);
     }
 
     static template = template(html);

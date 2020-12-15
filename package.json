@@ -4,8 +4,8 @@
     "version": "1.0.3",
     "license": "MIT",
     "dependencies": {
-        "@javascribble/quantum": "^1.0.6",
-        "@javascribble/quantum-icon": "^1.0.0"
+        "@javascribble/quantum": "^1.0.24",
+        "@javascribble/quantum-icon": "^1.0.1"
     },
     "devDependencies": {
         "live-server": "*"

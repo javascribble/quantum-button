@@ -3,13 +3,13 @@ import { animate } from '../import.js';
 
 const formatGradient = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
 
-export const enableAnimation = (slot, button, options) => {
+export const enableAnimation = (button, options) => {
     const { duration, alpha } = {
         ...radialGradientOptions,
         ...options
     };
 
-    slot.addEventListener('click', event => {
+    button.addEventListener('click', event => {
         if (button.hasAttribute('disabled')) {
             event.stopPropagation();
         }
