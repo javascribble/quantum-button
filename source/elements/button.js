@@ -17,15 +17,8 @@ export class Button extends Component {
 
     static get observedAttributes() { return ['disabled']; }
 
-    attributeChangedCallback(attribute, previousValue, currentValue) {
-        switch (attribute) {
-            case 'disabled':
-                setAttribute(this.#button, attribute, currentValue);
-                break;
-            // case 'loading':
-            //     // Implement spinner on content.
-            //     break;
-        }
+    disabledAttributeChanged(attribute, previousValue, currentValue) {
+        setAttribute(this.#button, attribute, currentValue);
     }
 }
 
