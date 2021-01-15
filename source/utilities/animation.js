@@ -1,5 +1,4 @@
 import { radialGradientOptions } from '../constants/animation.js';
-import { animate } from '../import.js';
 
 const formatGradient = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
 

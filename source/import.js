@@ -1,1 +1,0 @@
-export const { Component, template, define, animate, setAttribute } = quantum;

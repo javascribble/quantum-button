@@ -1,4 +1,3 @@
-import { Component, template, define, setAttribute } from '../import.js';
 import { enableAnimation } from '../utilities/animation.js';
 import html from '../templates/button.js';
 
@@ -17,7 +16,7 @@ export class Button extends Component {
 
     static get observedAttributes() { return ['disabled']; }
 
-    disabledAttributeChanged(attribute, previousValue, currentValue) {
+    attributeChangedCallback(attribute, previousValue, currentValue) {
         setAttribute(this.#button, attribute, currentValue);
     }
 }
