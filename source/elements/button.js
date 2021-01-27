@@ -1,6 +1,8 @@
 import { enableAnimation } from '../utilities/animation.js';
 import html from '../templates/button.js';
 
+const { Component, template, define, setAttribute } = quantum;
+
 export class Button extends Component {
     #button;
 

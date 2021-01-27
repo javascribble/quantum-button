@@ -1,5 +1,7 @@
 import { radialGradientOptions } from '../constants/animation.js';
 
+const { animate } = quantum;
+
 const formatGradient = (x, y, alpha, range) => `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, ${alpha}) ${range}%, transparent ${range}%)`;
 
 export const enableAnimation = (button, options) => {

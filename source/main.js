@@ -1,3 +1,3 @@
 import * as button from './elements/button.js';
 
-Object.assign(window, button);
+Object.assign(quantum, button);
