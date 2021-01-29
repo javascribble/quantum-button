@@ -1,3 +1,3 @@
-import * as button from './elements/button.js';
+import { Button } from './elements/button.js';
 
-Object.assign(quantum, button);
+Quantum.Button = Button;
