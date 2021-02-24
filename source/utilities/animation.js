@@ -20,17 +20,18 @@ export const enableAnimation = (button, options) => {
     button.addEventListener('mousedown', event => {
         let x = event.pageX - button.offsetLeft;
         let y = event.pageY - button.offsetTop;
-        animate(time => {
+        const animation = animate(time => {
             const { elapsed } = time;
             if (elapsed < duration) {
                 let progress = elapsed / duration;
                 let easing = progress * (2 - progress);
                 style.backgroundImage = formatGradient(x, y, alpha * (1 - easing), 100 * easing);
-                return true;
             } else {
                 style.backgroundImage = 'none';
-                return false;
+                animation.stop();
             }
         });
+
+        animation.start();
     });
 };
