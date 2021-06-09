@@ -1,7 +1,7 @@
 {
     "name": "@javascribble/quantum-button",
     "description": "",
-    "version": "1.2.5",
+    "version": "1.3.0",
     "license": "MIT",
     "dependencies": {
         "@javascribble/quantum": "^1.2.8",
