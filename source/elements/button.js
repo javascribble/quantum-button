@@ -1,4 +1,5 @@
 import { enableAnimation } from '../utilities/animation.js';
+import button from '../templates/button.js';
 
 const { setAttribute } = quantum;
 
@@ -19,3 +20,5 @@ export class Button extends Quantum {
         setAttribute(this.#button, attribute, currentValue);
     }
 }
+
+Button.define('quantum-button', button);

@@ -4,18 +4,18 @@
     "version": "1.5.0",
     "license": "MIT",
     "dependencies": {
-        "@javascribble/quantum": "^1.5.0",
-        "@javascribble/quantum-icon": "^1.5.0"
+        "@javascribble/quantum": "^1.5.8",
+        "@javascribble/quantum-icon": "^1.5.1"
     },
     "devDependencies": {
         "live-server": "*"
     },
     "scripts": {
-        "build": "cd ../rollup-quantum-build && npm start ../quantum-button/source ../quantum-button/build",
+        "build": "cd ../rollup-quantum-build && npm start ../quantum-button",
         "start": "live-server --open=/test/debug.html",
         "postversion": "npm publish --access public"
     },
-    "main": "./source/main.js",
+    "main": "./bundles/main.js",
     "homepage": "https://github.com/javascribble/quantum-button#readme",
     "repository": {
         "type": "git",
@@ -31,6 +31,7 @@
     ],
     "files": [
         "build",
+		"bundles",
         "source"
     ]
 }
