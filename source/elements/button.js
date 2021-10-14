@@ -1,15 +1,11 @@
 import { enableAnimation } from '../utilities/animation.js';
 import button from '../templates/button.js';
 
-const { setAttribute } = quantum;
-
 export class Button extends Quantum {
     #button = this.shadowRoot.querySelector('button');
 
     constructor() {
         super();
-
-        this.#button = this.shadowRoot.querySelector('button');
 
         enableAnimation(this.#button);
     }
@@ -17,7 +13,7 @@ export class Button extends Quantum {
     static get observedAttributes() { return ['disabled']; }
 
     attributeChangedCallback(attribute, previousValue, currentValue) {
-        setAttribute(this.#button, attribute, currentValue);
+        this.#button.setAttribute(attribute, currentValue);
     }
 }
 
